@@ -1,0 +1,6 @@
+{
+  "name": "Lanka Muni Operations",
+  "description": "Colombo Municipal Council unified Smart Dashboard for real-time Street Light override control, solid waste compaction fleet telemetry, and automated SLA warnings across Sri Lanka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
