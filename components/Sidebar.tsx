@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Building2,
   QrCode,
+  CreditCard,
 } from 'lucide-react';
 import { useTranslation, type Lang } from '@/lib/i18n';
 
@@ -26,6 +27,7 @@ export default function Sidebar() {
     { key: 'sidebar.nav.streetLights', path: '/street-lights', icon: Lightbulb },
     { key: 'sidebar.nav.waste', path: '/waste-management', icon: Trash2 },
     { key: 'sidebar.nav.citizenReport', path: '/citizen-report', icon: QrCode },
+    { key: 'sidebar.nav.billboard', path: '/billboard', icon: CreditCard },
     { key: 'sidebar.nav.settings', path: '/settings', icon: Settings },
   ];
 
@@ -155,13 +157,13 @@ export default function Sidebar() {
               <button
                 key={l}
                 onClick={() => setLang(l)}
-                className={`flex-1 py-1 rounded-md text-[10px] font-mono font-bold transition-all cursor-pointer uppercase tracking-wider ${
+                className={`flex-1 py-1 rounded-md text-[10px] font-bold transition-all cursor-pointer ${
                   lang === l
                     ? 'bg-white text-emerald-700 shadow-xs border border-slate-200'
                     : 'text-slate-500 hover:text-slate-800'
                 }`}
               >
-                {l.toUpperCase()}
+                {t(`lang.${l}`)}
               </button>
             ))}
           </motion.div>
